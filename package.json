@@ -1,0 +1,19 @@
+{
+  "name": "simple-fortnite",
+  "version": "1.0.0",
+  "description": "An API wrapper, for Fortnite, around the FortniteTracker API.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strandxo/simple-fortnite.git"
+  },
+  "author": "Connor Strand",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/strandxo/simple-fortnite/issues"
+  },
+  "homepage": "https://github.com/strandxo/simple-fortnite#readme",
+  "dependencies": {
+    "node-fetch": "^2.3.0"
+  }
+}
