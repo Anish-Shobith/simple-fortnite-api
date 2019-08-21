@@ -18,7 +18,7 @@ const fortnite = require('simple-fortnite');
 const client = new fortnite('Your-API-Key');
 
 // All methods
-client.find('username', 'platform [pc, xbl, psn]').then(console.log);
+client.find('username').then(console.log);
 ```
 
 ## Issues
