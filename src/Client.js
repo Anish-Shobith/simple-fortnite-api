@@ -1,6 +1,6 @@
-const fetch = require('simple-fortnite/src/node_modules/node-fetch');
-const Package = require('simple-fortnite/package.json');
-const Account = require('simple-fortnite/src/Account');
+const fetch = require('../node_modules/node-fetch');
+const Package = require('../package.json');
+const Profile = require('./Profile');
 
 /**
  * The client for interacting with the Fortnite Tracker API
@@ -55,13 +55,13 @@ class Client {
      * @param {string} username username of the user to search for
      * @param {string=} [platform='pc'] platform to search for user in (pc, xbl, or psn)
      * @param {boolean=} [raw=false] whether to return raw response from API
-     * @returns {(Promise<Account>|Promise<Object>)}
+     * @returns {(Promise<Profile>|Promise<Object>)}
      * @memberof Client
      */
     find(username, platform = 'pc', raw = false) {
         return this._request(`https://api.fortnitetracker.com/v1/profile/${platform}/${encodeURI(username)}`)
             .then(r => r.error ? Promise.reject(r) : r)
-            .then(r => raw ? r : new Account(r))
+            .then(r => raw ? r : new Profile(r))
             .catch(e => Promise.reject(e));
     }
 }
