@@ -21,5 +21,5 @@ const client = new fortnite('Your-API-Key');
 client.find('username', 'platform [pc, xbl, psn]').then(console.log);
 ```
 
-# Issues
+## Issues
 If you run into any issues, have any queries or concerns or would just like to make a few suggestions please do not hesitate to join our [discord support server](https://discord.gg/7yhv7CW)
